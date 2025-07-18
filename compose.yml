@@ -1,0 +1,52 @@
+services:
+
+  # Banco de dados MongoDB
+  mongodb:
+    image: mongo:6
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - netapp
+
+  # Backend em Node.js
+  backend:
+    build: ./backend
+    container_name: app_backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    networks:
+      - netapp
+    env_file:
+      - .env
+
+  # Frontend em HTML, CSS e Javascript
+  frontend:
+    build: ./frontend
+    container_name: app_frontend
+    ports:
+      - "8080:80"
+    networks:
+      - netapp
+
+  # Referente a segunda parte do trabalho
+  drawio:
+    image: jgraph/drawio
+    container_name: app_drawio
+    ports:
+      - "8088:8080"
+    networks:
+      - netapp
+
+# Usa volumes para a persistencia do banco de dados
+volumes:
+  mongo_data:
+
+# Rede compartilhada entre as imagens
+networks:
+  netapp:
+    driver: bridge

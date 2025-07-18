@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+  <title>AppConcessionaria</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="title">Sistema de Concessionária</div>
+      <div class="tabs_wrap">
+        <ul>
+          <li data-tabs="carros" class="active">Carros</li>
+          <li data-tabs="clientes">Clientes</li>
+          <li data-tabs="vendedores">Vendedores</li>
+          <li data-tabs="vendas">Vendas</li>
+          <li data-tabs="listagens">Listagens</li>
+        </ul>
+      </div>
+      <form id="formulario">
+        <!-- Aba carros -->
+        <div class="form_section carros active">
+          <div class="form_item">
+            <label>Marca:</label>
+            <input type="text" id="marcaCarro" class="input_full_width" required>
+          </div>
+          <div class="form_item">
+            <label>Modelo:</label>
+            <input type="text" id="modeloCarro" class="input_full_width" required>
+          </div>
+          <div class="form_item">
+            <label>Ano:</label>
+            <input type="number" id="anoCarro" class="input_full_width" required>
+          </div>
+          <div class="form_item">
+            <label>Cor:</label>
+            <input type="text" id="corCarro" class="input_full_width" required>
+          </div>
+          <div class="form_item">
+            <label>Placa:</label>
+            <input type="text" id="placaCarro" class="input_full_width" required>
+          </div>
+          <div class="form_item">
+            <label>Preço:</label>
+            <input type="number" id="precoCarro" class="input_full_width" required>
+          </div>
+          <div class="button_container">
+            <button id="enviarCarro" class="button_margin">Cadastrar Carro</button>
+          </div>
+        </div>
+        <!-- Aba clientes -->
+        <div class="form_section clientes">
+          <div class="form_item">
+            <label>Nome:</label>
+            <input type="text" id="nomeCliente" class="input_full_width" required>
+          </div>
+          <div class="form_item">
+            <label>CPF:</label>
+            <input type="text" id="cpfCliente" class="input_full_width" required>
+          </div>
+          <div class="form_item">
+            <label>Telefone:</label>
+            <input type="text" id="telefoneCliente" class="input_full_width" required>
+          </div>
+          <div class="button_container">
+            <button id="enviarCliente" class="button_margin">Cadastrar Cliente</button>
+          </div>
+        </div>
+        <!-- Aba vendedores -->
+        <div class="form_section vendedores">
+          <div class="form_item">
+            <label>Nome:</label>
+            <input type="text" id="nomeVendedor" class="input_full_width" required>
+          </div>
+          <div class="form_item">
+            <label>CPF:</label>
+            <input type="text" id="cpfVendedor" class="input_full_width" required>
+          </div>
+          <div class="form_item">
+            <label>Telefone:</label>
+            <input type="text" id="telefoneVendedor" class="input_full_width" required>
+          </div>
+          <div class="button_container">
+            <button id="enviarVendedor" class="button_margin">Cadastrar Vendedor</button>
+          </div>
+        </div>
+        <!-- Aba vendas -->
+        <div class="form_section vendas">
+          <div class="form_item">
+            <label>Carro:</label>
+            <select id="carroVenda" class="input_full_width">
+              <option value="">-- Selecione --</option>
+            </select>
+          </div>
+          <div class="form_item">
+            <label>Cliente:</label>
+            <select id="clienteVenda" class="input_full_width">
+              <option value="">-- Selecione --</option>
+            </select>
+          </div>
+          <div class="form_item">
+            <label>Vendedor:</label>
+            <select id="vendedorVenda" class="input_full_width">
+              <option value="">-- Selecione --</option>
+            </select>
+          </div>
+          <div class="button_container">
+            <button id="realizarVenda" class="button_margin">Realizar Venda</button>
+          </div>
+        </div>
+        <!-- Aba listagens -->
+        <div class="form_section listagens">
+          <div class="form_item">
+            <label for="categoriaProduto">Tipo de Listagem:</label>
+            <select id="categoriaProduto" class="input_full_width">
+              <option value="">-- Selecione --</option>
+              <option value="carros_vendidos">Carros Vendidos</option>
+              <option value="carros_disponiveis">Carros Não Vendidos</option>
+            </select>
+          </div>
+          <div class="button_container">
+            <button id="btnSelecionarListagem">Selecionar</button>
+          </div>
+          <div id="resultadoListagem" style="margin-top: 20px;"></div>
+        </div>
+      </form>
+      <div class="button_container" style="margin-top: 40px;">
+        <button id="btnAbrirDrawio" type="button">Abrir Draw.io</button>
+      </div>
+      <footer>
+        Marco Antonio Nitsche &#169; 2025
+      </footer>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
