@@ -33,15 +33,15 @@ Para utilizar esse sistema, basta clonar este repositório, além de verificar q
 
 Tendo isso em mente, basta acessar a pasta raiz do projeto e executar os seguintes comandos:
 
-~~
+~~~~
 cp .env.template .env
-~~
+~~~~
 
 Para copiar para a pasta raiz do projeto, o arquivo oculto que armazena as variáveis de ambiente do projeto.
 
-~~
+~~~~
 docker-compose up --build
-~~
+~~~~
 
 Para rodar o projeto
 
@@ -67,7 +67,7 @@ http://localhost:3000/cars
 
 **Fonte:** https://hub.docker.com/r/jgraph/drawio
 
-~~
+~~~~
 services:
   drawio:
     image: jgraph/drawio
@@ -76,7 +76,7 @@ services:
       - "8088:8080"
     networks:
       - netapp
-~~
+~~~~
 
 Draw.io é uma ferramenta de diagramas baseada na web, amplamente utilizada para criar fluxogramas, diagramas de rede, UML, entre outros. Permite criar e editar diagramas de forma visual, diretamente no navegador, sem necessidade de instalação local de softwares. Não há relação entre o drawio e o sistema desenvolvido na primeira parte deste projeto no entanto, para demonstrar o funcionamento da segunda parte do projeto, foi criado um botão no frontend, que acessa a imagem do drawio no seguinte endereço:
 
