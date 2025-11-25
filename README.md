@@ -23,7 +23,7 @@ Esse projeto envolve três conteineres principais:
 - Um para o frontend da aplicação.
 
 E ainda:
-- Possui um valume para persistencia de dados no banco de dados.
+- Possui um volume para persistencia de dados no banco de dados.
 - Uma rede compartilhada entre as imagens.
 - E um arquivo .env para armazenar as variáveis de ambiente do projeto.
 
